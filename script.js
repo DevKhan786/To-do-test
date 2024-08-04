@@ -12,6 +12,15 @@ const saveTask = () => {
   localStorage.setItem("tasks", JSON.stringify(taskList));
 };
 
+document.getElementById('sort-priority').addEventListener('click', () => {
+  taskList.sort((a, b) => {
+    const priorities = { low: 1, medium: 2, high: 3 };
+    return priorities[b.priority] - priorities[a.priority];
+  });
+  saveTask();
+  updateTask();
+});
+
 button.addEventListener("click", () => {
   const input = document.getElementById("todo-input");
   if (input.value !== "") {

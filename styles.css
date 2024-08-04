@@ -39,7 +39,7 @@ body{
 
 input[type="text"],
 select,
-#todo-button{
+button{
   width: 90%;
   border-radius: 30px;
   padding: 10px;
@@ -48,7 +48,7 @@ select,
 }
 
 select,
-#todo-button{
+button{
   cursor: pointer;
   transition-duration: 200ms;
   appearance: none; 
@@ -56,13 +56,13 @@ select,
 
 input:hover,
 select:hover,
-#todo-button:hover{
+button:hover{
   box-shadow: 0 0 4px blue;
 }
 
 input:focus-within,
 select:focus-within,
-#todo-button:focus-within{
+button:focus-within{
   box-shadow: 0 0 4px blue;
 }
 
@@ -121,6 +121,9 @@ li.high{
   gap: 10px;
 }
 
+button:hover {
+  transform: scale(1.05);
+}
 
 button.delete-btn {
   background-color: #dc3545;
@@ -149,4 +152,12 @@ li input[type="text"] {
   padding: 5px 10px;
   font-size: 14px;
   margin-right: 10px; 
+}
+
+li {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  transition: background-color 0.3s ease;
 }
