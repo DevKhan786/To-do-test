@@ -1,0 +1,152 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  padding: 50px;
+  gap: 30px;
+  background-color: wheat;
+  border-radius: 30px;
+  box-shadow: 0 0 5px black;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+input[type="text"],
+select,
+#todo-button{
+  width: 90%;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+select,
+#todo-button{
+  cursor: pointer;
+  transition-duration: 200ms;
+  appearance: none; 
+}
+
+input:hover,
+select:hover,
+#todo-button:hover{
+  box-shadow: 0 0 4px blue;
+}
+
+input:focus-within,
+select:focus-within,
+#todo-button:focus-within{
+  box-shadow: 0 0 4px blue;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  width: 80%;
+}
+
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  min-width: 300px;
+  max-width: 400px;
+  width: 100%;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+li.low{
+  background-color: greenyellow;
+  color: black;
+  box-shadow: 0 0 5px rgb(0,0,0,0.5);
+}
+
+li.medium{
+  background-color: orange;
+  color: black;
+  box-shadow: 0 0 5px rgb(0,0,0,0.5);
+}
+
+li.high{
+  background-color: red;
+  color: black;
+  box-shadow: 0 0 5px rgb(0,0,0,0.5);
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-action{
+  display: flex;
+  gap: 10px;
+}
+
+
+button.delete-btn {
+  background-color: #dc3545;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+button.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+button.complete-btn {
+  background-color: #28a745;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+button.complete-btn:hover {
+  background-color: #19692c;
+}
+
+li input[type="text"] {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-right: 10px; 
+}
