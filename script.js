@@ -37,6 +37,7 @@ button.addEventListener("click", () => {
 
     input.value = "";
     priority.value = "low";
+    
   } else {
     alert("Please enter a task!");
   }
